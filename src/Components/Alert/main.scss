@@ -1,0 +1,59 @@
+@import "../../Styles/variables.scss";
+
+.alert {
+  width: max-content;
+  min-height: 70px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: fixed;
+  bottom: -10%;
+  right: 20px;
+  background-color: $success;
+  color: white;
+
+  @include screenSmall {
+    width: 80%;
+    right: 10%;
+    left: 10%;
+  }
+
+  &.visible {
+    animation: slideIn 1.5s forwards;
+  }
+
+  &.hidden {
+    animation: slideOut 1.5s forwards;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    bottom: -10%;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 50px;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    bottom: 50px;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    bottom: -10%;
+    display: none;
+  }
+}

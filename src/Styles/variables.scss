@@ -1,0 +1,16 @@
+$primary-color: #4C39BA;
+$between-primary: #5a44d3;
+$bright-primary: #6C68DB;
+$highlight-color: #FFFF7E;
+
+$off-white: #FEFEFE;
+$alert: #f06e68;
+$success: #79d672;
+$box-background: #F6F6F6;
+$table-header: #36304a;
+
+@mixin screenSmall {
+    @media only screen and (max-width: 900px){
+        @content;
+    }
+}

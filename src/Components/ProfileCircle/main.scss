@@ -1,0 +1,72 @@
+@import "../../Styles/variables.scss";
+
+.profileCircleContainer {
+  width: 100%;
+  position: relative;
+
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid $highlight-color;
+    cursor: pointer;
+
+    &.punchedIn {
+      animation: pulseImage 1.5s infinite;
+      box-shadow: 0 0 0 0 rgba(#f06f68be, 0.5);
+      text-transform: uppercase;
+      border: 2px solid #f06f68be;
+    }
+  }
+
+  .profileMenu {
+    background-color: $between-primary;
+    position: absolute;
+    top: -175px;
+    width: 100%;
+    padding-top: 30px;
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      padding: 15px 15px 15px 45px;
+      width: 100%;
+      transition: 250ms ease-in-out background-color;
+      margin-top: 30px;
+
+      span {
+        margin-right: 40px;
+        font-size: 33px;
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      &:hover {
+        background-color: $bright-primary;
+      }
+    }
+
+    p {
+      color: $highlight-color;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@keyframes pulseImage {
+  0% {
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#5a99d4, 0);
+  }
+    100% {
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+}

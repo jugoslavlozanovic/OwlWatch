@@ -1,0 +1,17 @@
+@import "../../Styles/variables.scss";
+
+.mapContainerDiv {
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
+
+  .leaflet-container {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+}

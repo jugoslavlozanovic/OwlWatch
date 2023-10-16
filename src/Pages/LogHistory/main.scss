@@ -1,0 +1,69 @@
+@import "../../Styles/variables.scss";
+
+.tableContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+  color: #80848C;
+    font-weight: 100;
+    font-size: 15px;
+
+  table {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        background-color: $table-header;
+        font-size: 16px;
+
+        td {
+          padding: 20px;
+          color: white;
+          font-weight: 500;
+
+          &:first-child {
+            border-radius: 10px 0px 0px 0px;
+          }
+
+          &:last-child {
+            border-radius: 0px 10px 0px 0px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.192);
+      border-radius: 0px 0px 10px 10px;
+      tr {
+        cursor: pointer;
+        td {
+          padding: 20px;
+        }
+        &.secondItem {
+          background-color: #f5f5f5;
+        }
+
+        &:last-child {
+          td {
+            &:first-child {
+              border-radius: 0px 0px 0px 10px;
+            }
+            &:last-child {
+              border-radius: 0px 0px 10px 0px;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+  }
+}

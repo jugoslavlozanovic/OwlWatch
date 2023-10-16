@@ -1,0 +1,9 @@
+@import '../../Styles/variables.scss';
+
+.approved {
+    color: $success;
+}
+
+.declined {
+    color: $alert;
+}

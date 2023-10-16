@@ -1,0 +1,90 @@
+@import "../../Styles/variables.scss";
+
+.mainMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px 5px 25px;
+    width: 100%;
+    transition: 250ms ease-in-out background-color;
+    border-radius: 15px 0px 0px 15px;
+
+    @include screenSmall {
+      justify-content: center;
+      border-radius: 0px;
+      height: 66px;
+    }
+
+    span {
+      margin-right: 40px;
+      font-size: 33px;
+      margin-top: 10px;
+
+      @include screenSmall {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    &:hover {
+      background-color: $bright-primary;
+    }
+
+    &.active {
+      background-color: $off-white;
+      color: $primary-color;
+      font-weight: bold;
+      border-radius: 15px 0px 0px 15px;
+      position: relative;
+      transition: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        background-color: transparent;
+        bottom: -50px;
+        right: 0px;
+        height: 50px;
+        width: 25px;
+        border-top-right-radius: 15px;
+        box-shadow: 0 -25px 0px 0 $off-white;
+
+        @include screenSmall {
+          box-shadow: 0 0px 0px 0 $off-white;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        background-color: transparent;
+        top: -50px;
+        right: 0px;
+        height: 50px;
+        width: 25px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 25px 0px 0 $off-white;
+
+        @include screenSmall {
+          box-shadow: 0 0px 0px 0 $off-white;
+        }
+      }
+
+      @include screenSmall {
+        border-radius: 0px;
+      }
+    }
+  }
+}

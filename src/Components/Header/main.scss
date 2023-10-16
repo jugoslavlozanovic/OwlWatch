@@ -1,0 +1,15 @@
+@import '../../Styles/variables.scss';
+
+.headerContainer {
+    border-bottom: 1px solid #F8F8F8;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe98;
+
+    h1 {
+        text-transform: uppercase;
+        color: #80848C;
+    }
+}
